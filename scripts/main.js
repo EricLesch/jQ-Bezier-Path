@@ -10,16 +10,16 @@ var KANVAS1_START_POINT = {
 	top:50
 };
 var KANVAS1_END_POINT = {
-	left:420,
-	top:420
+	left:540,
+	top:540
 };
 var CONTROL_POINT_1 = {
-	left:420,
+	left:540,
 	top:50
 };
 var CONTROL_POINT_2 = {
 	left:50,
-	top:420
+	top:540
 };
 
 var KANVAS2_START_POINT = {
@@ -42,6 +42,9 @@ var KANVAS2_CONTROL_POINT2 = {
 	top:420
 };
 
+var DIV_END_LEFT = 540;
+var DIV_END_TOP = 540;
+
 
 var CONTROL_RADIUS = 20;
 var CONTROL_POINT_OPACITY = 0.8;
@@ -50,8 +53,8 @@ var TRANSITION_POINT_COLOR = "#f55";
 var CONTROL_POINT_COLOR = "#55f";
 
 
-$(function ()
-{
+//$(function ()
+//{
 	function initializeCanvas()
 	{
 
@@ -802,14 +805,10 @@ $(function ()
                 this._initialLeft = parseInt(this._$divElement.css('left'), 10);
                 this._initialTop = parseInt(this._$divElement.css('top'), 10);
 
-                this._endLeft = 270;
-                this._endTop = 270;
+                this._endLeft = DIV_END_LEFT;
+                this._endTop = DIV_END_TOP;
 
                 this._pathingInfo = null;
-
-//                this._animate();
-
-
 
             }
 
@@ -848,8 +847,6 @@ $(function ()
             {
                 var self = this;
 
-                console.log(points);
-
                 this._pathingInfo =
                 {
                     start: {
@@ -867,7 +864,6 @@ $(function ()
                     }
                 };
 
-                debugger;
             };
 
             return AnimatingDiv;
@@ -1051,5 +1047,5 @@ $(function ()
 	}
 
 	// go!
-	initializeCanvas();
-});
+//	initializeCanvas();
+//});

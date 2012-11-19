@@ -1,7 +1,8 @@
+.line,.lastUnit{overflow:hidden; *overflow:visible;*zoom:1;}
+
 .canvas-container {
 	float: left;
 }
-
 
 table {
 	float: left;
@@ -28,14 +29,14 @@ table * {
 }
 
 .animatingDivContainer {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     position: relative;
 }
 
 .animatingDiv {
-    left: 0;
-    top: 0;
+    left: 50px;
+    top: 50px;
     width: 30px;
     height: 30px;
     position: absolute;

@@ -2176,6 +2176,7 @@ fabric.util.string = {
 
         if (element !== fabric.document && fabric.util.getElementPosition(element) === 'fixed') firstFixedAncestor = element;
 
+
         scrollLeft += element.scrollLeft || 0;
         scrollTop += element.scrollTop || 0;
     }
