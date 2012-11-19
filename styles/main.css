@@ -1,0 +1,43 @@
+.canvas-container {
+	float: left;
+}
+
+
+table {
+	float: left;
+	min-width: 250px;
+	border: 1px solid black;
+	margin-right: 20px;
+
+}
+
+table * {
+	padding: 2px;
+}
+
+.displayTable {
+	display: table;
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+.mb30 {
+	margin-bottom: 30px;
+}
+
+.animatingDivContainer {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.animatingDiv {
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: blue;
+}
