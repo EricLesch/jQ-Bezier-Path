@@ -142,10 +142,10 @@ Released   : 20120108
                                         The bottom right red circle controls the end point.
                                     </li>
                                     <li>
-                                        The top right blue circle controls the control point of the start point.
+                                        The top right blue circle controls the control point for the start point.
                                     </li>
                                     <li>
-                                        The bottom left blue circle controls the control point of the end point.
+                                        The bottom left blue circle controls the control point for the end point.
                                     </li>
                                 </ul>
                               
@@ -174,7 +174,7 @@ Released   : 20120108
 
                                 </div>
                                 
-                                <p>Have fun!</p>
+                                <p>Try out your own parameters <a href="http://jsbin.com/onavaq/1/edit">here</a>. Have fun!</p>
 
                             </div>
                         </div>
@@ -201,24 +201,24 @@ Released   : 20120108
 <!-- end #footer -->
 
 <script id='jsObjectTemplate' type="text/x-handlebars-template">
+  var path = {
+            start: {
+              x: {{startPoint.left}},
+              y: {{startPoint.top}},
+              angle: {{controlPoint1.degrees}},
+              length: {{controlPoint1.percentDistance}}
+            },
+            end: {
+              x: {{endPoint.left}},
+              y: {{endPoint.top}},
+              angle: {{controlPoint2.degrees}},
+              length: {{controlPoint2.percentDistance}}
+            }
+          };
+
   $('my_elem').animate(
     {
-      path : new $.path.bezier(
-        {
-          start: {
-            x: {{startPoint.left}},
-            y: {{startPoint.top}},
-            degrees: {{controlPoint1.degrees}},
-            length: {{controlPoint1.percentDistance}}
-          },
-          end: {
-            x: {{endPoint.left}},
-            y: {{endPoint.top}},
-            degrees: {{controlPoint2.degrees}},
-            length: {{controlPoint2.percentDistance}}
-          }
-        }
-      )
+      path : new $.path.bezier(path);
     }
   );
 
