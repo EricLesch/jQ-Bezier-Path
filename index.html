@@ -16,27 +16,7 @@ Released   : 20120108
     <meta name="description" content=""/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>jQuery Path Bezier Curve Generator</title>
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ 'Oswald::latin', 'Arvo::latin' ] },
-          active: function()
-          {
-              go();
-          },
-          inactive: function()
-          {
-              go();
-          }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); </script>
+
 
     <link href="styles/style.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="styles/main.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -56,9 +36,31 @@ Released   : 20120108
         {
             prettyPrint();
             initializeCanvas();
-//            $('#page-bgbtm').css('paddingTop', '0px');
+//            
         }
             </script>
+
+    <script type="text/javascript">
+          WebFontConfig = {
+            google: { families: [ 'Oswald::latin', 'Arvo::latin' ] },
+              active: function()
+              {
+                  go();
+              },
+              inactive: function()
+              {
+                  go();
+              }
+          };
+          (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+          })(); </script>
 
 </head>
 <body>
@@ -89,9 +91,13 @@ Released   : 20120108
                                 <p>The excellent <a href="http://weepy.github.com/jquery.path/" target="_blank">jQuery.Path</a> allows
                                     you to create custom pathing when using the jQuery animate function. Bezier curves are
                                     especially interesting, because they allow you to move an object along almost any 
-                                    conceivable path. The demo of jquery.Path is <a href="http://weepy.github.com/jquery.path/" target="_blank">here</a>.
+                                    conceivable path (especially when chaining animations together).
                                 </p>
                                 
+                                <p>
+                                    The demo of jquery.Path is <a href="http://weepy.github.com/jquery.path/" target="_blank">here</a>.
+                                </p>
+
                                 <p>To create a bezier path, you just supply the necessary parameters.</p>
                                 
                                 <p>From the documentation on Github:</p>
@@ -222,6 +228,20 @@ Released   : 20120108
     }
   );
 
+
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20462008-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
 </script>
 
