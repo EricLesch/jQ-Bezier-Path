@@ -211,6 +211,8 @@ bezierMath.translateBezierPointsToPercentAndAngle = function (points)
 
 bezierMath.translatePercentAndAngleToPoints = function (controlPointInfo, startPoint, endPoint)
 {
+    debugger;
+
     var controlPoint1Angle = controlPointInfo.controlPoint1.angleRadians;
     var controlPoint2Angle = controlPointInfo.controlPoint2.angleRadians;
 
