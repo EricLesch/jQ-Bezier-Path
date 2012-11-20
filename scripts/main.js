@@ -1,40 +1,4 @@
-/**
- * Created by JetBrains PhpStorm.
- * User: Eric
- * Date: 11/19/12
- * Time: 6:58 PM
- * To change this template use File | Settings | File Templates.
- */
-var KANVAS1_START_POINT = {
-    left: 50,
-    top: 50
-};
-var KANVAS1_END_POINT = {
-    left: 540,
-    top: 540
-};
-var CONTROL_POINT_1 = {
-    left: 540,
-    top: 50
-};
-var CONTROL_POINT_2 = {
-    left: 50,
-    top: 540
-};
 
-var DIV_END_LEFT = 540;
-var DIV_END_TOP = 540;
-
-
-var CONTROL_RADIUS = 20;
-var CONTROL_POINT_OPACITY = 0.8;
-
-var TRANSITION_POINT_COLOR = "#f55";
-var CONTROL_POINT_COLOR = "#55f";
-
-
-//$(function ()
-//{
 function initializeCanvas()
 {
 
@@ -312,6 +276,11 @@ function initializeCanvas()
     // abstract class
     var BezierWithControls = (function (_, fabric, Circle, Bezier, events)
     {
+        var CONTROL_RADIUS = 20;
+        var CONTROL_POINT_OPACITY = 0.8;
+        var TRANSITION_POINT_COLOR = "#f55";
+        var CONTROL_POINT_COLOR = "#55f";
+
         function BezierWithControls(options)
         {
             // fix javascript event callbacks
@@ -592,6 +561,9 @@ function initializeCanvas()
 
     var AnimatingDiv = (function (_)
     {
+        var DIV_END_LEFT = 540;
+        var DIV_END_TOP = 540;
+
         function AnimatingDiv($divElement)
         {
             _.bindAll(this);
@@ -666,14 +638,29 @@ function initializeCanvas()
     })(_);
 
 
-    // initialize the canvas's
+    // initialize
     var kanvas1 = new fabric.Canvas('fabricCanvas', {renderOnAddition: false});
-    var kanvas2 = new fabric.Canvas('fabricCanvas2', {renderOnAddition: false});
+    kanvas1.selection = false;
 
     // change the hover cursor
     kanvas1.hoverCursor = 'pointer';
-    kanvas2.hoverCursor = 'pointer';
 
+    var KANVAS1_START_POINT = {
+        left: 50,
+        top: 50
+    };
+    var KANVAS1_END_POINT = {
+        left: 540,
+        top: 540
+    };
+    var CONTROL_POINT_1 = {
+        left: 540,
+        top: 50
+    };
+    var CONTROL_POINT_2 = {
+        left: 50,
+        top: 540
+    };
 
     /************** left canvas bezier initialization *****************/
 
@@ -709,7 +696,3 @@ function initializeCanvas()
 
     animatingDiv.animate();
 }
-
-// go!
-//	initializeCanvas();
-//});
