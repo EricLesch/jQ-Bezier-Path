@@ -49,3 +49,11 @@ table * {
     position: absolute;
     background: blue;
 }
+
+.txtC {
+    text-align: center !important;
+}
+
+.bold {
+    font-weight: bold;
+}
